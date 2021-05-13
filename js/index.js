@@ -9,7 +9,7 @@ function updateTime() {
   const hours = now.getHours() * 30;
   secondsHand.style.transform = `rotate(${seconds}deg)`;
   minutesHand.style.transform = `rotate(${minutes}deg)`;
-  hoursHand.style.transform = `rotate(${hours}deg)`;
+  hoursHand.style.transform = `rotate(${hours + minutes / 12}deg)`;
 }
 
 setInterval(updateTime, 1000);
